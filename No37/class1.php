@@ -2,13 +2,12 @@
 
     class User extends Calc{
         public string $username;
-        public float $spendinglimit;
-
+        public float $spendingLimit;
         public array $products;
 
         public function __construct(string $username, float $spendinglimit, array $products) {
             $this->username = $username;
-            $this->spendinglimit = $spendinglimit;
+            $this->spendingLimit = $spendinglimit;
             $this->products = $products;
         }
 
@@ -17,16 +16,16 @@
         }
 
         public function getSpendinglimit(): float {
-            return $this->spendinglimit;
+            return $this->spendingLimit;
         }
 
 
-        public function getUProducts(): string {
+        public function getUProducts(): array {
             return $this->products;
         }
 
         public function setSpendinglimit(float $spendinglimit): void {
-            $this->spendinglimit = $spendinglimit;
+            $this->spendingLimit = $spendinglimit;
         }
 
         public function setProducts(array $products): void {
